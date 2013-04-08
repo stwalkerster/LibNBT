@@ -27,7 +27,7 @@ namespace LibNamedBinaryTag
             //read the name length
             var buffer = new char[2];
             sr.ReadBlock(buffer, 0, 2);
-            var bytebuf = new byte[] {(byte) buffer[0], (byte) buffer[1]};
+            var bytebuf = new byte[] {(byte) buffer[1], (byte) buffer[0]};
             short length = BitConverter.ToInt16(bytebuf, 0);
 
             buffer = new char[length];
